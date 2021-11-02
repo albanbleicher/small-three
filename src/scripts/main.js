@@ -7,5 +7,7 @@ if (module.hot) {
 }
 document.addEventListener("DOMContentLoaded", (e) => {
   const canvas = document.querySelector("canvas");
-  new App(canvas);
+  const debug = window.location.hash.includes("debug");
+  if (debug) console.warn("Debug mode enabled");
+  new App(canvas, debug);
 });

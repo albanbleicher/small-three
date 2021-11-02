@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@parcel/transformer-sass": "^2.0.0",
-    "three": "^0.134.0"
+    "three": "^0.134.0",
+    "tweakpane": "^3.0.5"
   }
 }

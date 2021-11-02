@@ -1,3 +1,4 @@
+import { Pane } from "tweakpane";
 import { Object3D, Scene } from "three";
 import Renderer from "./Renderer";
 import Camera from "./Camera";
@@ -5,7 +6,7 @@ import Time from "./Tools/Time";
 import World from "./World";
 
 export default class App {
-  constructor(canvas, config) {
+  constructor(canvas, debug) {
     this.canvas = canvas;
     this.time = new Time();
     this.camera = new Camera();
@@ -15,6 +16,9 @@ export default class App {
       camera: this.camera,
       scene: this.scene,
     });
+    if (debug) {
+      this.debug = new Pane();
+    }
     this.container = new Object3D();
     this.container.name = "App";
     this.init();
@@ -27,6 +31,7 @@ export default class App {
       camera: this.camera,
       renderer: this.renderer,
       time: this.time,
+      debug: this.debug,
     });
     this.scene.add(this.world.container);
     window.addEventListener("resize", () => {

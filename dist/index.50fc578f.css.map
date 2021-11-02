@@ -1,1 +1,0 @@
-{"mappings":"AAAA;AAAA;EAEI;EACA;EACA;EACA;;;AAGJ;EACI;EACA","sources":["src/app.scss"],"sourcesContent":["html,\nbody {\n    background-color: rgb(0, 72, 255);\n    margin: 0;\n    padding: 0;\n    height: 100%;\n}\n\ncanvas {\n    width: 100%;\n    height: 100%;\n}"],"names":[],"version":3,"file":"index.50fc578f.css.map","sourceRoot":"/__parcel_source_root/"}

@@ -5,9 +5,13 @@ export default class World {
     this.camera = params.camera;
     this.renderer = params.renderer;
     this.time = params.time;
+    this.debug = params.debug;
     this.container = new Object3D();
     this.container.name = "World";
     this.init();
+    if (this.debug) {
+      this.setDebug();
+    }
   }
   init() {
     const geo = new IcosahedronGeometry(10, 1);
