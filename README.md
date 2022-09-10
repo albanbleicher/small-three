@@ -31,4 +31,3 @@ To preview lint errors and warnings, just use `pnpm lint`. Add `--fix` flag to f
 
 - add accurate percentage to loader (onProgress callback currently not supported by three)
 - add tweakpane
--
