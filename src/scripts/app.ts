@@ -16,18 +16,19 @@ export default class App {
   private scene: Scene
   private renderer: Renderer
   private time!: Time
-  private assets: AssetsObject
+  /** Uncomment this line to use loaded assets */
+  // private assets: AssetsObject
   constructor(options: AppOptions) {
     this.camera = new Camera({ wrapper: options.wrapper })
-    this.assets = options.assets
     this.scene = new Scene()
     this.renderer = new Renderer({
       camera: this.camera,
       wrapper: options.wrapper,
       scene: this.scene,
     })
-    this.assets = options.assets
     this.time = new Time()
+    /** Uncomment this line to use loaded assets */
+    // this.assets = options.assets
   }
   mount() {
     /** Add elements to scene */
