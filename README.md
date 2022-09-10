@@ -1,4 +1,4 @@
-# small three
+# small three 🌈
 
 quickly bootstrap a three project with useful pre-configured goods
 
