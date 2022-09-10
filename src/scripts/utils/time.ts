@@ -1,6 +1,6 @@
 /** From Bruno Simon's 2019 portfolio */
 import { Clock } from 'three'
-import EventEmitter from './EventEmitter'
+import EventEmitter from './eventEmitter'
 
 export default class Time extends EventEmitter {
   ticker!: number
