@@ -7,19 +7,25 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "lint --fix": "eslint . --fix"
+    "mrm": "mrm --preset=@albanbl/mrm-preset",
+    "lint": "eslint --format=pretty .",
+    "lint --fix": "eslint . --fix",
+    "lint:fix": "eslint --fix --format=pretty .",
+    "prepare": "husky install",
+    "format": "prettier --write ."
   },
   "devDependencies": {
+    "@albanbl/eslint-config": "^1.0.0",
+    "@albanbl/mrm-preset": "^1.0.0",
+    "@types/node": "^18.7.18",
     "@types/three": "^0.144.0",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "@unocss/preset-attributify": "^0.45.18",
     "@unocss/preset-web-fonts": "^0.45.18",
-    "eslint": "^8.23.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint": "^8.23.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "typescript": "^4.6.4",
     "unocss": "^0.45.18",
@@ -29,5 +35,47 @@
   "dependencies": {
     "path": "^0.12.7",
     "three": "^0.144.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "plugins": [
+      "import"
+    ],
+    "extends": [
+      "@albanbl"
+    ],
+    "rules": {
+      "import/order": [
+        "error",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index",
+            "object",
+            "type"
+          ]
+        }
+      ]
+    },
+    "eslintIgnore": [
+      "package.json"
+    ]
+  },
+  "lint-staged": {
+    "*": "pnpm eslint --fix"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "useTabs": false,
+    "quoteProps": "consistent",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "printWidth": 100
   }
 }
