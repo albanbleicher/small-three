@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@albanbl/eslint-config": "^1.0.0",
-    "@albanbl/mrm-preset": "^1.0.0",
+    "@albanbl/mrm-preset": "^1.0.2",
     "@types/node": "^18.7.18",
     "@types/three": "^0.144.0",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
@@ -37,32 +37,8 @@
     "three": "^0.144.0"
   },
   "eslintConfig": {
-    "root": true,
-    "plugins": [
-      "import"
-    ],
     "extends": [
       "@albanbl"
-    ],
-    "rules": {
-      "import/order": [
-        "error",
-        {
-          "groups": [
-            "builtin",
-            "external",
-            "internal",
-            "parent",
-            "sibling",
-            "index",
-            "object",
-            "type"
-          ]
-        }
-      ]
-    },
-    "eslintIgnore": [
-      "package.json"
     ]
   },
   "lint-staged": {

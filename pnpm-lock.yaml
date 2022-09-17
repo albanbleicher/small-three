@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@albanbl/eslint-config': ^1.0.0
-  '@albanbl/mrm-preset': ^1.0.0
+  '@albanbl/mrm-preset': ^1.0.2
   '@types/node': ^18.7.18
   '@types/three': ^0.144.0
   '@typescript-eslint/eslint-plugin': ^5.36.2
@@ -26,7 +26,7 @@ dependencies:
 
 devDependencies:
   '@albanbl/eslint-config': 1.0.0_irgkl5vooow2ydyo6aokmferha
-  '@albanbl/mrm-preset': 1.0.0
+  '@albanbl/mrm-preset': 1.0.2
   '@types/node': 18.7.18
   '@types/three': 0.144.0
   '@typescript-eslint/eslint-plugin': 5.36.2_wxqvmnl3i4rbvz4ixyoiufmx3e
@@ -70,8 +70,8 @@ packages:
       - typescript
     dev: true
 
-  /@albanbl/mrm-preset/1.0.0:
-    resolution: {integrity: sha512-Fu33jYWNMfW2JS1rK/g8BvsoXhdm1vqQipCRBaDn3vK/Ru+USRZHGH6dI72Ozogou/dnmAegLGVgE0T8Z98lSw==}
+  /@albanbl/mrm-preset/1.0.2:
+    resolution: {integrity: sha512-65YkOm2h/1dHOVNcI/F4RYEU4z6bXEmjiZRxofVDMuDRuYa6iSyMi57hq+UVWFxg/9jrBTkRvqim0PVoFgOiBA==}
     dependencies:
       mrm-core: 7.1.6
     dev: true
