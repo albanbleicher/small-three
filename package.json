@@ -1,7 +1,9 @@
 {
-  "name": "small-three",
-  "private": true,
-  "version": "0.0.0",
+  "name": "create-small-three",
+  "version": "0.1.8",
+  "bin": {
+    "create-small-three": "bin/cli.cjs"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,7 +17,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "@albanbl/eslint-config": "^1.0.0",
+    "@albanbl/eslint-config": "^1.0.3",
     "@albanbl/mrm-preset": "^1.0.2",
     "@types/node": "^18.7.18",
     "@types/three": "^0.144.0",
@@ -53,5 +55,17 @@
     "bracketSpacing": true,
     "arrowParens": "always",
     "printWidth": 100
-  }
+  },
+  "description": "## Setup 🌱",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albanbleicher/small-three.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albanbleicher/small-three/issues"
+  },
+  "homepage": "https://github.com/albanbleicher/small-three#readme"
 }

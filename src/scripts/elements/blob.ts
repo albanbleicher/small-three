@@ -1,16 +1,16 @@
 import { Mesh, Object3D, ShaderMaterial, SphereGeometry } from 'three'
-import Time from '../utils/time'
+import Time from '../utils/time.js'
 import vertex from '@/assets/shaders/vertex.glsl'
 import fragment from '@/assets/shaders/fragment.glsl'
-interface CubeOptions {
+interface BlobOptions {
   time: Time
 }
-export default class Cube {
+export default class Blob {
   public container: Object3D
   private time: Time
-  constructor(options: CubeOptions) {
+  constructor(options: BlobOptions) {
     this.container = new Object3D()
-    this.container.name = 'Cubes'
+    this.container.name = 'Blob'
     this.time = options.time
     this.create()
   }
@@ -30,7 +30,7 @@ export default class Cube {
     const mesh = new Mesh(geo, mat)
     this.container.add(mesh)
     this.time.on('tick', () => {
-      mat.uniforms.uTime.value += 0.005
+      mat.uniforms.uTime!.value += 0.005
     })
   }
 }

@@ -1,5 +1,5 @@
 import { Scene } from 'three'
-import Cube from './elements/cube'
+import Blob from './elements/blob'
 import Camera from './render/camera'
 import Renderer from './render/renderer'
 import Time from './utils/time'
@@ -32,7 +32,7 @@ export default class App {
   }
   mount() {
     /** Add elements to scene */
-    const cubes = new Cube({
+    const cubes = new Blob({
       time: this.time,
     })
     this.scene.add(cubes.container)
