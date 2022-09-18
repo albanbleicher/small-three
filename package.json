@@ -1,8 +1,8 @@
 {
   "name": "create-small-three",
   "type": "module",
-  "version": "0.1.8",
-  "description": "## Setup 🌱",
+  "version": "1.0.0",
+  "description": "quickly bootstrap a three project with useful pre-configured goods",
   "author": "",
   "license": "ISC",
   "homepage": "https://github.com/albanbleicher/small-three#readme",
