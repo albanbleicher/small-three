@@ -1,7 +1,7 @@
 {
-  "name": "create-small-three",
+  "name": "small-three",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "quickly bootstrap a three project with useful pre-configured goods",
   "author": "",
   "license": "ISC",
@@ -14,9 +14,6 @@
     "url": "https://github.com/albanbleicher/small-three/issues"
   },
   "main": "index.js",
-  "bin": {
-    "create-small-three": "bin/cli.cjs"
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
