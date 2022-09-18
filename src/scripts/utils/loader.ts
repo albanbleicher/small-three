@@ -26,17 +26,17 @@ interface AssetsObject {
   models: { [key: string]: never }
 }
 function getExtension(url: string) {
-  return url.split(/[#?]/)[0].split('.').pop()?.trim()
+  return url.split(/[#?]/)[0]!.split('.').pop()?.trim()
 }
 const createNestedObject = (base: { [key: string]: never }, key: string, value: never) => {
   key = key.replace('../../assets/', '')
   const tree = key.split('/')
   tree.shift()
-  tree[tree.length - 1] = tree[tree.length - 1].split('.')[0]
+  tree[tree.length - 1] = tree[tree.length - 1]!.split('.')[0] as string
 
   const lastName = value ? tree.pop() : false
   for (let i = 0; i < tree.length; i++) {
-    base = base[tree[i]] = base[tree[i]] || {}
+    base = base[tree[i] as string] = (base[tree[i] as string] as never) || {}
   }
   if (lastName) base = base[lastName] = value
 }
@@ -53,7 +53,7 @@ export default class Loader {
     /** Textures */
     const textureLoader = new TextureLoader()
     Object.keys(textureImports).map((key, i) => {
-      textureLoader.load(Object.values(textureImports)[i], (texture) => {
+      textureLoader.load(Object.values(textureImports)[i] as string, (texture) => {
         createNestedObject(this.assets.textures, key, texture as never)
       })
     })
@@ -69,17 +69,17 @@ export default class Loader {
       console.log(ext)
       switch (ext) {
         case 'gltf':
-          gltfLoader.load(Object.values(textureImports)[i], (model) => {
+          gltfLoader.load(Object.values(textureImports)[i] as string, (model) => {
             createNestedObject(this.assets.models, key, model as never)
           })
           break
         case 'glb':
-          gltfLoader.load(Object.values(modelImports)[i], (model) => {
+          gltfLoader.load(Object.values(modelImports)[i] as string, (model) => {
             createNestedObject(this.assets.models, key, model as never)
           })
           break
         case 'fbx':
-          fbxLoader.load(Object.values(modelImports)[i], (model) => {
+          fbxLoader.load(Object.values(modelImports)[i] as string, (model) => {
             createNestedObject(this.assets.models, key, model as never)
           })
           break

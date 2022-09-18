@@ -1,10 +1,22 @@
 {
   "name": "create-small-three",
+  "type": "module",
   "version": "0.1.8",
+  "description": "## Setup 🌱",
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/albanbleicher/small-three#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albanbleicher/small-three.git"
+  },
+  "bugs": {
+    "url": "https://github.com/albanbleicher/small-three/issues"
+  },
+  "main": "index.js",
   "bin": {
     "create-small-three": "bin/cli.cjs"
   },
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -16,8 +28,12 @@
     "prepare": "husky install",
     "format": "prettier --write ."
   },
+  "dependencies": {
+    "path": "^0.12.7",
+    "three": "^0.144.0"
+  },
   "devDependencies": {
-    "@albanbl/eslint-config": "^1.0.3",
+    "@albanbl/eslint-config": "^1.0.4",
     "@albanbl/mrm-preset": "^1.0.2",
     "@types/node": "^18.7.18",
     "@types/three": "^0.144.0",
@@ -34,17 +50,13 @@
     "vite": "^3.1.0",
     "vite-plugin-glsl": "^0.3.0"
   },
-  "dependencies": {
-    "path": "^0.12.7",
-    "three": "^0.144.0"
+  "lint-staged": {
+    "*": "pnpm eslint --fix"
   },
   "eslintConfig": {
     "extends": [
       "@albanbl"
     ]
-  },
-  "lint-staged": {
-    "*": "pnpm eslint --fix"
   },
   "prettier": {
     "trailingComma": "es5",
@@ -55,17 +67,5 @@
     "bracketSpacing": true,
     "arrowParens": "always",
     "printWidth": 100
-  },
-  "description": "## Setup 🌱",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/albanbleicher/small-three.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/albanbleicher/small-three/issues"
-  },
-  "homepage": "https://github.com/albanbleicher/small-three#readme"
+  }
 }

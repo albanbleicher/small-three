@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@albanbl/eslint-config': ^1.0.3
+  '@albanbl/eslint-config': ^1.0.4
   '@albanbl/mrm-preset': ^1.0.2
   '@types/node': ^18.7.18
   '@types/three': ^0.144.0
@@ -25,7 +25,7 @@ dependencies:
   three: 0.144.0
 
 devDependencies:
-  '@albanbl/eslint-config': 1.0.3_irgkl5vooow2ydyo6aokmferha
+  '@albanbl/eslint-config': 1.0.4_irgkl5vooow2ydyo6aokmferha
   '@albanbl/mrm-preset': 1.0.2
   '@types/node': 18.7.18
   '@types/three': 0.144.0
@@ -44,8 +44,8 @@ devDependencies:
 
 packages:
 
-  /@albanbl/eslint-config/1.0.3_irgkl5vooow2ydyo6aokmferha:
-    resolution: {integrity: sha512-yoIy4QuxidOeM3IU9DotIulMpw7Ib7bvNjkQ6Og/OFlJH9u6VzURad9RLTqO+sEQ99Ri1c6aHtO5sJNDZe1eZQ==}
+  /@albanbl/eslint-config/1.0.4_irgkl5vooow2ydyo6aokmferha:
+    resolution: {integrity: sha512-63O/c4eGaCG/zO7HweBS1PWz+U4oeG06JiUy8+Ccz0Labqe9Yy6XUVwDDtDC7MQQjMtAFSHk12By6CsIJZYF7Q==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
@@ -57,6 +57,7 @@ packages:
       eslint-import-resolver-node: 0.3.6
       eslint-module-utils: 2.7.4_77bcxf26k2ybbg2aogmnmecpn4
       eslint-plugin-import: 2.26.0_uzffwd2kxyy6gwinwkcp25zmz4
+      eslint-plugin-jsonc: 2.4.0_eslint@8.23.1
       eslint-plugin-prettier: 4.2.1_cabrci5exjdaojcvd6xoxgeowu
       eslint-scope: 7.1.1
       eslint-utils: 3.0.0_eslint@8.23.1
@@ -1417,6 +1418,18 @@ packages:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
       - supports-color
+    dev: true
+
+  /eslint-plugin-jsonc/2.4.0_eslint@8.23.1:
+    resolution: {integrity: sha512-YXy5PjyUL9gFYal6pYijd8P6EmpeWskv7PVhB9Py/AwKPn+hwnQHcIzQILiLfxztfhtWiRIUSzoLe/JThZgSUw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: '>=6.0.0'
+    dependencies:
+      eslint: 8.23.1
+      eslint-utils: 3.0.0_eslint@8.23.1
+      jsonc-eslint-parser: 2.1.0
+      natural-compare: 1.4.0
     dev: true
 
   /eslint-plugin-prettier/4.2.1_cabrci5exjdaojcvd6xoxgeowu:

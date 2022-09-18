@@ -53,7 +53,7 @@ fs.readFile(index, 'utf8', function (err, data) {
     console.error(err)
     process.exit(-1)
   }
-  const result = data.replace('%title%', repoName)
+  const result = data.replace(/%title%/g, repoName)
 
   fs.writeFile(index, result, 'utf8', function (err) {
     if (err) {
