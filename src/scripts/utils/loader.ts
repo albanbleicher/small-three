@@ -66,7 +66,6 @@ export default class Loader {
     const fbxLoader = new FBXLoader()
     Object.keys(modelImports).map((key, i) => {
       const ext = getExtension(key)
-      console.log(ext)
       switch (ext) {
         case 'gltf':
           gltfLoader.load(Object.values(textureImports)[i] as string, (model) => {
@@ -87,7 +86,5 @@ export default class Loader {
           break
       }
     })
-
-    console.log(this.assets)
   }
 }
