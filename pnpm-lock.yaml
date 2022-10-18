@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@albanbl/eslint-config': ^1.0.4
   '@albanbl/mrm-preset': ^1.0.2
+  '@tweakpane/core': ^1.1.0
   '@types/node': ^18.7.18
   '@types/three': ^0.144.0
   '@typescript-eslint/eslint-plugin': ^5.36.2
@@ -15,6 +16,7 @@ specifiers:
   path: ^0.12.7
   prettier: ^2.7.1
   three: ^0.144.0
+  tweakpane: ^3.1.0
   typescript: ^4.6.4
   unocss: ^0.45.18
   vite: ^3.1.0
@@ -27,6 +29,7 @@ dependencies:
 devDependencies:
   '@albanbl/eslint-config': 1.0.4_irgkl5vooow2ydyo6aokmferha
   '@albanbl/mrm-preset': 1.0.2
+  '@tweakpane/core': 1.1.0
   '@types/node': 18.7.18
   '@types/three': 0.144.0
   '@typescript-eslint/eslint-plugin': 5.36.2_wxqvmnl3i4rbvz4ixyoiufmx3e
@@ -37,6 +40,7 @@ devDependencies:
   husky: 8.0.1
   lint-staged: 13.0.3
   prettier: 2.7.1
+  tweakpane: 3.1.0
   typescript: 4.8.3
   unocss: 0.45.18_vite@3.1.0
   vite: 3.1.0
@@ -224,6 +228,10 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    dev: true
+
+  /@tweakpane/core/1.1.0:
+    resolution: {integrity: sha512-vbbiQb+aoFI13lIbE7DJvhHZVE1YlUpGoaAamSpU6wLp2jA3VowS1wfRJBBB8IBCYm7nF6ULl7zfJKxl1XdyfA==}
     dev: true
 
   /@types/eslint/7.29.0:
@@ -2964,6 +2972,10 @@ packages:
     dependencies:
       tslib: 1.14.1
       typescript: 4.8.3
+    dev: true
+
+  /tweakpane/3.1.0:
+    resolution: {integrity: sha512-PGAp/LPQdHwzL7/iAW4lV1p9iPQTti7YMjMWO48CoYjvZRS59RmgQnhEGzKzqST1JnmOYmQUjTe8bdhlZRJs5A==}
     dev: true
 
   /type-check/0.4.0:

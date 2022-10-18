@@ -6,6 +6,7 @@ loader.load().then(() => {
   const app = new App({
     wrapper: document.querySelector('.wrapper') as HTMLDivElement,
     assets: loader.assets,
+    debug: true,
   })
   app.mount()
 })

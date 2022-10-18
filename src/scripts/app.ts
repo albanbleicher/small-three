@@ -1,4 +1,5 @@
 import { Scene } from 'three'
+import { Pane } from 'tweakpane'
 import Blob from './elements/blob'
 import Camera from './render/camera'
 import Renderer from './render/renderer'
@@ -10,12 +11,15 @@ interface AssetsObject {
 interface AppOptions {
   wrapper: HTMLDivElement
   assets: AssetsObject
+  debug: boolean
 }
 export default class App {
   private camera: Camera
   private scene: Scene
   private renderer: Renderer
   private time!: Time
+  /** Pane object available project-wide */
+  static debug: Pane
   /** Uncomment this line to use loaded assets */
   // private assets: AssetsObject
   constructor(options: AppOptions) {
@@ -31,6 +35,10 @@ export default class App {
     // this.assets = options.assets
   }
   mount() {
+    /** Add debug pane */
+    App.debug = new Pane({ title: 'Debug' })
+    /** Hide it if there's no hash debug in URL */
+    if (!window.location.hash.includes('debug')) App.debug.hidden = true
     /** Add elements to scene */
     const cubes = new Blob({
       time: this.time,

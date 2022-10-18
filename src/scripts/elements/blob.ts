@@ -1,5 +1,6 @@
 import { Mesh, Object3D, ShaderMaterial, SphereGeometry } from 'three'
 import Time from '../utils/time.js'
+import App from '../app.js'
 import vertex from '@/assets/shaders/vertex.glsl'
 import fragment from '@/assets/shaders/fragment.glsl'
 interface BlobOptions {
@@ -32,5 +33,7 @@ export default class Blob {
     this.time.on('tick', () => {
       mat.uniforms.uTime!.value += 0.005
     })
+    const debugFolder = App.debug.addFolder({ title: 'Blob' })
+    debugFolder.addInput(mat, 'wireframe')
   }
 }
